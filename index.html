@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Times', 'Times New Roman';
+            text-align: center;
+            background-color: #999999;
+            margin: none;
+            padding: 0;
+           
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #808080;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        p {
+            color: #fff;
+	    font-size: 20px;
+        }
+
+        .photos img {
+            max-width: 100%;
+            margin-top: 25px;
+        }
+
+         .more-info {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;//появляется доп. информация
+            margin-top: 20px;
+            text-align: left;
+	    font-size: 25px;
+	    color: #fff
+        }
+
+        .show-more-button {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+	
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Меня зовут Марат, мне 18 лет.</h1>
+        <p>И я хочу быть программистом.</p>
+        <div class="photos">
+            <img src="Vq99DZm9O2M.jpg" width="483" height="555" alt="Фото 1">
+            <img src="dK6jhm26b9c.jpg" width="390" hight="555" alt="Фото 2">
+        </div>
+        <button onclick="toggleMoreInfo()" class="show-more-button">Показать больше информации</button>
+        <div id="more-info" class="more-info">
+            <h2>Дополнительная информация:</h2>
+            <ul>
+                <li>Когда сходил на meetup и увидел сколько много нужно знать, чтобы быть хорошим backend разработчиком, я 		загорелся идеей стать им. На том же meetup'е окончательно убедился, что backend меня привлекает гораздо 		больше, чем frontend, </li>
+
+                <li>Обучаюсь на специальность Правоохранительная деятельность. Эта специальность интересная, изучение 				гражданского, уголовного, трудового права дало мне знания, которые мне пригодятся по жизни, но профессии, в 			которых можно применить эти знания уж очень сильно мне не нравятся. </li>
+
+                <li>Одним из своих гланых плюсов считаю авантюризм: отправиться в семейный поход в горы или планировать с 			друзьями поездку на велосипедах от Челябинска до Екатеринбурга очень даже весело.</li>
+	
+                <li>Также изучение чего-то нового, что захватывает мой интерес и я начинаю искать все больше информации на 			эту тему. Чтение статей, просмотр видео на ютубе, документальные фильмы, а главное применеие полученных 			знаний доставляет невероятное удовольствие.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleMoreInfo() {
+            var moreInfo = document.getElementById("more-info");//блок с доп информацией
+            var button = document.querySelector(".show-more-button");//привязывает блок к кнопке.
+
+            if (moreInfo.style.opacity === "0") { //блок на появление/исчензовение текста.  
+                moreInfo.style.opacity = "1";
+                button.innerHTML = "Скрыть информацию";
+            } else {
+                moreInfo.style.opacity = "0";
+                button.innerHTML = "Показать больше информации";
+            }
+        }
+    </script>
+</body>
+</html>
